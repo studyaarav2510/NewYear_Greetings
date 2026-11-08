@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy New Year 🎇 A little surprise for you</title>
+<meta name="description" content="A little New Year surprise for you. Light the phuljhari and see what happens ✨">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Happy New Year 🎇">
+<meta property="og:description" content="A little surprise is waiting for you. Light the phuljhari ✨">
+<meta name="theme-color" content="#050816">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎇</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#050816;--bg2:#1b1146;--gold:#ffd36b;--gold2:#ff9f1c;--pink:#ff7eb6;--ink:#fff8e8;--card:rgba(255,255,255,.07);--line:rgba(255,211,107,.35)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg1:#050816;--bg2:#1b1146}}
+:root[data-theme="dark"]{--bg1:#050816;--bg2:#1b1146}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,"Times New Roman",serif;text-align:center;background:radial-gradient(ellipse at 20% 100%,rgba(255,126,182,.18),transparent 50%),radial-gradient(ellipse at 85% 80%,rgba(80,120,255,.2),transparent 55%),linear-gradient(180deg,var(--bg1),var(--bg2)) fixed;background-color:#050816;overflow-x:hidden}
+body.locked{overflow:hidden;height:100%}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+#intro{position:fixed;inset:0;z-index:2;pointer-events:none;transition:opacity 1s}
+#intro.out{opacity:0}
+.from{position:absolute;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + 14px);font-size:14px;color:var(--gold);opacity:0;animation:fin 1.5s ease .3s forwards}
+.l{position:absolute;top:24vh;left:0;right:0;padding:0 26px;margin:0;font-size:clamp(21px,5.6vw,32px);line-height:1.4;opacity:0}
+.l1{animation:fio 2.8s ease .5s both}
+.l2{animation:fio 3s ease 3.1s both}
+.l3{color:var(--gold);animation:fin 1s ease 5.6s forwards}
+#intro.lit .l,#intro.lit .from{display:none}
+@keyframes fio{0%{opacity:0;transform:translateY(12px)}20%,80%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes fin{to{opacity:1}}
+.sp{position:absolute;left:50%;bottom:-2vh;width:0;height:0}
+#spark{pointer-events:auto;position:absolute;left:-44px;bottom:0;width:88px;height:min(46vh,380px);background:none;box-shadow:none;border:0;padding:0;margin:0;border-radius:0;cursor:pointer;transform-origin:50% 100%;transform:rotate(-14deg) translateY(110%);opacity:0;animation:rise 1.3s cubic-bezier(.2,.9,.3,1) 3.2s forwards}
+@keyframes rise{to{transform:rotate(-14deg);opacity:1}}
+.coat{position:absolute;left:50%;bottom:38%;width:9px;height:62%;margin-left:-4.5px;background:repeating-linear-gradient(#6a6a6a 0 3px,#3c3c3c 3px 6px);border-radius:3px 3px 0 0}
+.wire{position:absolute;left:50%;bottom:0;width:3px;height:40%;margin-left:-1.5px;background:linear-gradient(#c8c8c8,#777)}
+.tip{position:absolute;left:50%;top:-6px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:#ff8a2a;box-shadow:0 0 14px 5px rgba(255,140,40,.7);animation:ember 1.2s infinite}
+.tip::after{content:"";position:absolute;inset:-18px;border:2px solid rgba(255,211,107,.85);border-radius:50%;animation:ping 1.5s infinite}
+@keyframes ember{50%{box-shadow:0 0 22px 9px rgba(255,140,40,.9)}}
+@keyframes ping{from{transform:scale(.4);opacity:1}to{transform:scale(1.5);opacity:0}}
+#intro.lit .tip{background:#fff;box-shadow:0 0 28px 12px rgba(255,225,150,.95);animation:none}
+#intro.lit .tip::after{display:none}
+#intro.lit .coat{animation:burn 3s linear forwards}
+@keyframes burn{to{height:6%}}
+#reveal{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:12vh 20px 20px}
+.to{color:var(--gold);font-size:20px;min-height:26px}
+h1{font-family:"Playfair Display",Georgia,serif;font-weight:900;font-size:clamp(44px,13vw,84px);line-height:1.05;margin:6px 0 26px;background:linear-gradient(90deg,var(--gold),#fff,var(--pink),var(--gold));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:-250% 0}}
+.msg{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 22px;font-size:19px;line-height:1.7;backdrop-filter:blur(5px)}
+.msg p{margin:0 0 14px}.msg p:last-child{margin:0}
+.sign{color:var(--gold);margin-top:18px!important}
+section{margin:42px 0}
+h2{font-weight:normal;font-size:clamp(21px,5.5vw,28px);color:var(--gold);margin:0 0 16px}
+button{font:inherit;font-size:16px;border:0;border-radius:999px;padding:13px 24px;margin:6px;cursor:pointer;color:#2a0b40;background:linear-gradient(90deg,var(--gold),var(--gold2));font-weight:bold}
+button.alt{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.fmsg{min-height:64px;margin-top:14px;font-size:20px;line-height:1.5;color:var(--gold)}
+.tiny{font-size:15px;opacity:.8;margin:26px 0 8px}
+[hidden]{display:none!important}
+.pop{animation:pop .9s ease both}
+@keyframes pop{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+footer{padding:34px 20px 44px;font-size:14px;opacity:.8}
+</style>
+</head>
+<body class="locked">
+<canvas id="c"></canvas>
+
+<div id="intro">
+  <div class="from">💌 A New Year surprise from <b>Aarav Shah</b></div>
+  <p class="l l1">Another year is coming to an end…</p>
+  <p class="l l2">…and a brand new one is about to begin ✨</p>
+  <p class="l l3">Tap the phuljhari to light it 🎇</p>
+  <div class="sp">
+    <button id="spark" aria-label="Light the phuljhari" disabled><span class="coat"><span class="tip" id="tip"></span></span><span class="wire"></span></button>
+  </div>
+</div>
+
+<main id="reveal" hidden>
+  <div class="to" id="to"></div>
+  <h1>Happy New Year</h1>
+  <div class="msg">
+    <p>As the old year fades into memories, a fresh new chapter begins, full of new hopes, new dreams and endless possibilities.</p>
+    <p>May this year bring you good health, happiness and success in everything you do. May every day give you a reason to smile, every challenge turn into a lesson, and every goal you are chasing come a little closer.</p>
+    <p>Wishing you and your family a very happy, healthy and prosperous New Year. 🎉</p>
+    <p class="sign">With warm wishes,<br><b>Aarav Shah</b></p>
+  </div>
+
+  <section>
+    <h2>What does your new year hold? 🔮</h2>
+    <button id="fort">✨ Reveal what my year holds</button>
+    <div class="fmsg" id="fmsg"></div>
+  </section>
+
+  <p class="tiny">✨ Move your finger or mouse over the screen, you are holding a sparkler too.</p>
+  <button class="alt" id="boom">🎆 More fireworks</button>
+  <footer>Made with love 💛 &nbsp;·&nbsp; Greetings from <b>Aarav Shah</b></footer>
+</main>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var cv=$('c'),x=cv.getContext('2d'),W,H,P=[],stars=[],ss=null,state='idle',rk=null,litAt=0,T0=performance.now();
+  function size(){W=cv.width=innerWidth;H=cv.height=innerHeight}size();addEventListener('resize',size);
+  for(var i=0;i<130;i++)stars.push({x:Math.random(),y:Math.random()*.85,r:Math.random()*1.4+.3,p:Math.random()*6.3,s:.0008+Math.random()*.002});
+  var R=Math.random,SP=['#ffffff','#ffe9a8','#ffb347'];
+
+  function hashName(){try{return decodeURIComponent((location.hash||'').slice(1)).replace(/-/g,' ').replace(/[^A-Za-z0-9 ]/g,'').trim()}catch(e){return ''}}
+  function showName(){var n=hashName();$('to').textContent=n?'Dear '+n+',':''}
+  showName();addEventListener('hashchange',showName);
+
+  function spk(px,py,n,sp,d){for(var i=0;i<n;i++){var a=R()*6.283,s=R()*sp;
+    P.push({k:0,x:px,y:py,vx:Math.cos(a)*s,vy:Math.sin(a)*s-.6,g:.12,f:.98,l:1,d:d||(.03+R()*.03),s:1,c:SP[R()*3|0]})}}
+  function burst(px,py,n){var h=R()*360;n=n||70;
+    for(var i=0;i<n;i++){var a=R()*6.283,s=R()*5+1.5;
+      P.push({k:0,x:px,y:py,vx:Math.cos(a)*s,vy:Math.sin(a)*s,g:.05,f:.985,l:1,d:.012+R()*.01,r:2,c:'hsl('+(h+R()*50)+',100%,'+(60+R()*15)+'%)'})}}
+  function show(n){for(var i=0;i<n;i++)setTimeout(function(){burst(W*(.12+R()*.76),H*(.1+R()*.4))},i*240)}
+  function tipPos(){var r=$('tip').getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2}}
+
+  function formText(cx,cy){
+    var fs=Math.min(W*.18,H*.13,130),o=document.createElement('canvas');o.width=W;o.height=H;
+    var g=o.getContext('2d'),y1=H*.2,y2=y1+fs*1.1;
+    g.fillStyle='#fff';g.textAlign='center';g.textBaseline='middle';
+    g.font='900 '+fs+'px "Playfair Display",Georgia,serif';
+    g.fillText('Happy',W/2,y1);g.fillText('New Year',W/2,y2);
+    var d=g.getImageData(0,0,W,H).data,st=Math.max(3,Math.round(fs/20)),cols=['#ffd36b','#ffffff','#ff7eb6','#ffb347'],n=0;
+    for(var yy=Math.max(0,y1-fs);yy<Math.min(H,y2+fs);yy+=st)for(var xx=0;xx<W;xx+=st){
+      if(d[((yy|0)*W+xx)*4+3]>128){var a=R()*6.283,s=R()*9+3;
+        P.push({k:1,i:n++,t:0,x:cx,y:cy,vx:Math.cos(a)*s,vy:Math.sin(a)*s,tx:xx,ty:yy,c:cols[R()*4|0]})}}
+  }
+  function finish(){
+    P.forEach(function(p){if(p.k===1){p.k=0;p.vx=(R()-.5)*3;p.vy=-R()*2;p.g=.04;p.f=.99;p.d=.006+R()*.01;p.l=1;p.s=0;p.r=1.4}});
+    $('intro').classList.add('out');
+    var r=$('reveal');r.hidden=false;r.className='pop';document.body.classList.remove('locked');
+    state='done';scrollTo(0,0);
+    setInterval(function(){if(!document.hidden)burst(W*(.1+R()*.8),H*(.08+R()*.4),55)},2600);
+  }
+
+  setTimeout(function(){$('spark').disabled=false},4400);
+  $('spark').onclick=function(){
+    if(state!=='idle')return;
+    state='lit';litAt=performance.now();$('intro').classList.add('lit');
+  };
+
+  var F=['Your year will be full of pleasant surprises.','Something you have been waiting for is finally coming your way.','New doors will open, and you will be ready to walk through them.','This year, your hard work will be noticed and rewarded.','Good health and a peaceful mind are coming your way.','You will make memories that make you smile for years.','A lucky break is just around the corner.','Everything you have been working towards is coming together.','Great news is on its way to you this year.','You will find joy in the smallest moments this year.'],last=-1;
+  $('fort').onclick=function(){
+    var i;do{i=R()*F.length|0}while(i===last);last=i;
+    var o=$('fmsg');o.textContent='✨ '+F[i];o.className='fmsg';void o.offsetWidth;o.className='fmsg pop';
+    var r=o.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,60);
+  };
+  $('boom').onclick=function(){show(5)};
+  addEventListener('pointermove',function(e){if(state==='done')spk(e.clientX,e.clientY,3,2.5)});
+  addEventListener('pointerdown',function(e){if(state==='done'&&!e.target.closest('button'))burst(e.clientX,e.clientY,50)});
+
+  function loop(now){
+    x.globalCompositeOperation='source-over';x.clearRect(0,0,W,H);
+    var sa=Math.min(1,(now-T0)/2500);x.fillStyle='#fff';
+    for(var i=0;i<stars.length;i++){var s=stars[i];x.globalAlpha=sa*(.25+.75*Math.abs(Math.sin(now*s.s+s.p)));x.beginPath();x.arc(s.x*W,s.y*H,s.r,0,6.283);x.fill()}
+    if(!ss&&R()<.004)ss={x:W*(.3+R()*.7),y:H*R()*.35,l:1};
+    if(ss){x.globalAlpha=ss.l;x.strokeStyle='#fff';x.lineWidth=1.5;x.beginPath();x.moveTo(ss.x,ss.y);x.lineTo(ss.x+60,ss.y-30);x.stroke();ss.x-=11;ss.y+=5.5;ss.l-=.03;if(ss.l<=0)ss=null}
+    x.globalCompositeOperation='lighter';
+
+    if(state==='lit'){var tp=tipPos();spk(tp.x,tp.y,9,5);
+      if(now-litAt>3000){state='rocket';rk={x:tp.x,y:tp.y,vy:-Math.max(10,H/60),ty:H*.26}}}
+    if(state==='rocket'&&rk){
+      rk.x+=(W/2-rk.x)*.05;rk.y+=rk.vy;spk(rk.x,rk.y,3,1.4,.05);
+      x.globalAlpha=1;x.fillStyle='#fff';x.beginPath();x.arc(rk.x,rk.y,3,0,6.283);x.fill();
+      if(rk.y<=rk.ty){state='text';formText(rk.x,rk.y);rk=null;setTimeout(finish,4600)}}
+
+    for(var j=P.length-1;j>=0;j--){var p=P[j];
+      if(p.k===1){p.t++;
+        if(p.t<26){p.x+=p.vx;p.y+=p.vy;p.vx*=.95;p.vy*=.95}
+        else{p.x+=(p.tx-p.x)*.1+(R()-.5)*.4;p.y+=(p.ty-p.y)*.1+(R()-.5)*.4}
+        x.globalAlpha=.55+.45*Math.sin(now*.006+p.i);x.fillStyle=p.c;x.fillRect(p.x,p.y,2.4,2.4);continue}
+      p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.vx*=p.f;p.l-=p.d;
+      if(p.l<=0){P.splice(j,1);continue}
+      x.globalAlpha=p.l;
+      if(p.s){x.strokeStyle=p.c;x.lineWidth=1.3;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(p.x-p.vx*1.6,p.y-p.vy*1.6);x.stroke()}
+      else{x.fillStyle=p.c;x.beginPath();x.arc(p.x,p.y,p.r||1.8,0,6.283);x.fill()}
+    }
+    x.globalAlpha=1;requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
